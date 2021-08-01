@@ -1,0 +1,266 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<section class="landing" id="home">
+    <div class="landing-img">
+        <img class="small" src="{{ url_for( 'static', filename='img/developers.svg') }}"  alt="students" />
+    </div>
+    <div class="intro-text">
+        <h1>Student Developers Society</h1>
+        <p>We are a community with a vision to bridge the gap between students and professionals. Our mission is to make proper education accessible to last person on farthest corner of the planet. We believe that access to proper education is the right of every human and we work tirelessly to make education more accessible to more people everyday.</p>
+        <div class="button">
+            <a href="{{ url_for('about') }}">About Us</a>
+        </div>
+    </div>
+    <div class="landing-img big">
+        <img src="{{ url_for( 'static', filename='img/developers.svg') }}"  alt="students" />
+    </div>
+</section>
+<!--
+<section id="about" class="about">
+    <div class="container">
+        <div class="about-body">
+            <div class="about-img">
+                <img src="{{ url_for( 'static', filename='img/manwithlap.jpg') }}"  alt="man" />
+            </div>
+            <div class="about-text">
+                <h2 class="heading">Who are we?</h2>
+                <p><br>
+                    We hope to make students industry ready by helping them engage in actual software projects and working with other aspiring developers and professionals. We conduct workshops and interactive sessions to help aid us in fulfilling our mission. We often collaborate with other communities to bring events such as the first ever Rails Girls Kochi, Debutsav Kerala, LetsPy etc. We have turned three and so far, the journey has been sweet. </p>
+            </div>
+        </div>
+    </div>
+</section> -->
+<section id="whatwedo" class="whatwedo">
+    <div class="container">
+        <div class="thingswedo-container">
+            <div class="thingswedo-heading">
+                <h2 class="heading">Things We Do</h2>
+            </div>
+            <div class="thingswedo">
+                <div class="the-things">
+                    <img class="whatwedo-logo" src="{{ url_for( 'static', filename='img/tools.svg') }}" >
+                    <h3>Skill Enhancement</h3>
+                    <p>Join in on our workshops, talks, interactive sessions and a lot more to pick up a new skill or to enhance your skill through our well educated instructors.</p>
+                </div>
+                <div class="the-things">
+                    <img class="whatwedo-logo" src="{{ url_for( 'static', filename='img/users.svg') }}" >
+                    <h3>Meetups</h3>
+                    <p>Get involved in meetups of a wonderful community of developers and aspiring developers to share ideas and to know about the best practices in the development world.</p>
+                </div>
+                <div class="the-things">
+                    <img class="whatwedo-logo" src="{{ url_for( 'static', filename='img/file-code.svg') }}" >
+                    <h3>Software Developement</h3>
+                    <p>We are advocates of Free/Libre Software. We are a community of makers and are constantly working on various fun projects.</p>
+                </div>
+                <div class="the-things">
+                    <img class="whatwedo-logo" src="{{ url_for( 'static', filename='img/handshake.svg') }}" >
+                    <h3>Networking</h3>
+                    <p>Participate in meetups and workshops conducted in association with different communities to get to know interesting people while picking up new skills along the way.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="major-events" class="major-events">
+    <div class="container">
+        <div class="contact-heading">
+            <h2 class="heading">A few things we did that we're particularly proud of.</h2>
+        </div>
+        <div class="major-event big" style="display: flex;">
+            <img
+                src="{{ url_for( 'static', filename='img/rgk.jpeg') }}"
+                alt="Rails Girls Kochi group Image"
+            />
+            <div class="major-event-text">
+                <h3>
+                    <a class="heading" href="http://railsgirls.com/kochi-2018.html"
+                    >Rails Girls Kochi</a
+                                      >
+                </h3>
+                <p class="date-place">
+                    <i class="far fa-calendar-alt"></i> March 11, 2018 |
+                    <i class="fas fa-map-marker"></i>
+                    <a
+                        href="https://startupmission.kerala.gov.in/get-facility-technology-zone"
+                    >KTIZ Kalamassery</a
+                                     >
+                </p>
+                <p>
+                    Rails Girls Workshop is a global movement/event organized across
+                    the world to encourage more girls to choose and stay in a career
+                    of software development. Rails Girls Kochi was organized by
+                    Kerala Ruby User Group and Student Developer Society. It was the
+                    first major event organized by SDS.
+                </p>
+            </div>
+        </div>
+        <div class="major-event big">
+            <div class="major-event-text">
+                <h3>
+                    <a class="heading" href="http://debutsav.in/kochi/"
+                    >Debutsav Kochi</a
+                                   >
+                </h3>
+                <p class="date-place">
+                    <i class="far fa-calendar-alt"></i> November 24, 2018 |
+                    <i class="fas fa-map-marker"></i>
+                    <a href="http://soe.cusat.ac.in/"
+                    >School of Engineering, Cochin University of Science and
+                        Technology, Kalamassery, Ernakulam, Kerala.</a
+                                                                   >
+                </p>
+                <p>
+                    MiniDebConfs are local meetings organized by Debian project
+                    members to achieve similar objectives to those of the DebConf,
+                    but on a regional context. When majority of talks are not Debian
+                    specific, it is called DebUtsav - celebration of Free Software
+                    by Debian community. Debutsav was organized by Free Software
+                    Community of India, Democratic Alliance for Knowledge Freedom
+                    (DAKF) and Student Developer Society.
+                </p>
+            </div>
+            <img
+                src="{{ url_for( 'static', filename='img/debutsav.jpg') }}"
+                alt="Debutsav Kochi group Image"
+            />
+        </div>
+        <div class="small major-event">
+            <img
+                src="{{ url_for( 'static', filename='img/debutsav.jpg') }}"
+                alt="Debutsav Kochi group Image"
+            />
+            <div class="major-event-text">
+                <h3>
+                    <a class="heading" href="http://debutsav.in/kochi/"
+                    >Debutsav Kochi</a
+                                   >
+                </h3>
+                <p class="date-place">
+                    <i class="far fa-calendar-alt"></i> November 24, 2018 |
+                    <i class="fas fa-map-marker"></i>
+                    <a href="http://soe.cusat.ac.in/"
+                    >School of Engineering, Cochin University of Science and
+                        Technology, Kalamassery, Ernakulam, Kerala.</a
+                                                                   >
+                </p>
+                <p>
+                    MiniDebConfs are local meetings organized by Debian project
+                    members to achieve similar objectives to those of the DebConf,
+                    but on a regional context. When majority of talks are not Debian
+                    specific, it is called DebUtsav - celebration of Free Software
+                    by Debian community. Debutsav was organized by Free Software
+                    Community of India, Democratic Alliance for Knowledge Freedom
+                    (DAKF) and Student Developer Society.
+                </p>
+            </div>
+        </div>
+        <div class="major-event" style="display: flex;">
+            <img
+                src="{{ url_for( 'static', filename='img/desfest.jpg') }}"
+                alt="Designer Fest group Image"
+            />
+            <div class="major-event-text">
+                <h3>
+                    <a
+                        class="heading"
+                        href="https://www.meetup.com/StuDevSoc/events/260240970/"
+                    >Designer Fest</a
+                                  >
+                </h3>
+                <p class="date-place">
+                    <i class="far fa-calendar-alt"></i> April 13, 2019 |
+                    <i class="fas fa-map-marker"></i>
+                    <a href="www.inqinnovation.com/kochi">InQ Innovation Kochi</a>
+                </p>
+                <p>
+                    Designer fest was the first of it's kind designer oriented
+                    meetup to happen in Kochi. It bought discussions regarding
+                    design concepts and the use of FOSS tools for professional
+                    design needs. It was the first non developer oriented event
+                    organized by student developer society.
+                </p>
+            </div>
+        </div>
+        <div class="major-event big">
+            <div class="major-event-text">
+                <h3>
+                    <a
+                        class="heading"
+                        href="https://www.townscript.com/e/letspy-021232"
+                    >LetsPy 2019</a>
+                </h3>
+                <p class="date-place">
+                    <i class="far fa-calendar-alt"></i> November 02-03 2019 |
+                    <i class="fas fa-map-marker"></i>
+                    <a href="http://www.rit.ac.in/"
+                    >Rajiv Gandhi Institute Of Technology (Government Engineering
+                        College, Kottayam)</a>
+                </p>
+                <p>
+                    LetsPy was a two day Django Python ‘workathon’
+                    (workshop/hackathon) aimed at introducing novice
+                    enthusiasts/students to the world of computer science and
+                    collaborative development. This event is organized by four
+                    leading communities of Kerala. Student Developer Society, Kochi
+                    Python, Tinkerhub and Pehia Foundation.
+                </p>
+            </div>
+            <img src="{{ url_for( 'static', filename='img/letspy.jpg') }}" alt="Letspy group Image" />
+        </div>
+        <div class="major-event small">
+            <img src="{{ url_for( 'static', filename='img/letspy.jpg') }}" alt="Letspy group Image" />
+            <div class="major-event-text">
+                <h3>
+                    <a
+                        class="heading"
+                        href="https://www.townscript.com/e/letspy-021232"
+                    >LetsPy 2019</a
+                                >
+                </h3>
+                <p class="date-place">
+                    <i class="far fa-calendar-alt"></i> November 02-03 2019 |
+                    <i class="fas fa-map-marker"></i>
+                    <a href="http://www.rit.ac.in/"
+                    >Rajiv Gandhi Institute Of Technology (Government Engineering
+                        College, Kottayam)</a
+                                          >
+                </p>
+                <p>
+                    LetsPy was a two day Django Python ‘workathon’
+                    (workshop/hackathon) aimed at introducing novice
+                    enthusiasts/students to the world of computer science and
+                    collaborative development. This event is organized by four
+                    leading communities of Kerala. Student Developer Society, Kochi
+                    Python, Tinkerhub and Pehia Foundation.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="contact" id="contact">
+    <div class="contact-heading">
+        <h2 class="heading"> Contact Us</h2>
+    </div>
+    <div class="contact-container">
+        <form action="" method="post">
+            <h4>Feel free to drop us a message anytime.</h4>
+            <fieldset>
+                <input placeholder="Your name" type="text" tabindex="1" required>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Your Email Address" type="email" tabindex="2" required>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3">
+            </fieldset>
+            <fieldset>
+                <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
+            </fieldset>
+            <fieldset>
+                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+            </fieldset>
+        </form>
+    </div>
+</section>
+{% endblock %}

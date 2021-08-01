@@ -1,0 +1,75 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>{% block title %}Student Developers Society{% endblock %}</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='/img/favicon.png') }}" type="image/x-icon">
+        <meta name="description" content="Bridging the gap between students and the Industry">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static', filename='/css/menu.css') }}"  type="text/css" media="screen" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}"  type="text/css" media="screen" />
+        <!-- CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
+    </head>
+    <body>
+        <div class="sticky">
+            <div class="header">
+                <img class="logo" src="{{ url_for('static', filename='/img/logo.svg') }}"  alt="a dev" />
+                <input type="checkbox" id="chk">
+                <label for="chk" class="show-menu-btn" style="align-items:center;color: black;">
+                    <i class="fas fa-bars"></i>
+                </label>
+
+                <ul class="menu">
+                    <a href="/">Home</a>
+                    <a href="https://blog.studevsoc.com">Blog</a>
+                    <a href="{{ url_for('about') }}">About</a>
+                    <a href="/#contact">Contact</a>
+                    <a href="{{ url_for('coc') }}">Code of Conduct</a>
+                    <label for="chk" class="hide-menu-btn">
+                        <i class="fas fa-times"></i>
+                    </label>
+                </ul>
+            </div>
+        </div>
+        <main>
+          {% block body %}
+          {% endblock %}
+
+            <section id="footer" class="footer">
+                <div class="container">
+                    <div class="link-blocks">
+                        <div class="places" style="text-align:left;">
+                            <a href="/">Home</a>
+                            <a href="{{ url_for( 'about') }}">About</a>
+                            <a href="/#contact">Contact</a>
+                            <a href="{{ url_for( 'coc') }}">Code of Conduct</a>
+                        </div>
+                        <div class="places" style="text-align:right">
+                            <a href="{{ url_for('index') }}">Home</a>
+                            <a href="https://blog.studevsoc.com">Blog</a>
+                            <a href='https://studevsoc.gitlab.io/infra/status/'>Status</a>
+                        </div>
+                    </div>
+                    <div class="social" id="JoinUs">
+                        <ul>
+                            <li><a href="https://www.meetup.com/StuDevSoc/"><i class="fab fa-meetup icon"></i></a></li>
+                            <li><a href="https://twitter.com/studevsoc"><i class="fab fa-twitter icon"></i></a></li>
+                            <li><a href="https://www.facebook.com/StuDevSoc"><i class="fab fa-facebook-square icon"></i></a></li>
+                            <li><a href="https://www.linkedin.com/company/studevsoc/"><i class="fab fa-linkedin icon"></i></a></li>
+                            <li><a href="https://gitlab.com/studevsoc"><i class="fab fa-gitlab icon"></i></a></li>
+                            <li><a href="https://t.me/studevsoc"><i class="fab fa-telegram icon"></i></a></li>
+                            <li><a href="https://www.instagram.com/studevsoc/"><i class="fab fa-instagram icon"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="made-with-love">
+                        <p>Made with ❤️. All original content is licensed under a free/libre copyleft license (GPL or CC BY-SA).</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        {% block scripts %}
+        {% endblock %}
+    </body>
+</html>
