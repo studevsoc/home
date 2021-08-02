@@ -5,6 +5,7 @@ development:
   stage: development
   image: ruby:latest
   script:
+    - gem install dpl
     - dpl --provider=heroku --app=$HEROKU_APP_DEVELOPMENT --api-key=$HEROKU_API_KEY_DEV
   only:
     - main
