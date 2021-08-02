@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container success_page">
+        <img src="{{ url_for('static', filename='img/success.webp') }}" width="300px" height="300px" />
+        <p></br></br>Hey {{ name }} 👋,</br> Your message has been submitted. Our team will get in touch with you soon.</p>
+</div>
+{% endblock %}

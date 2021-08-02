@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 {% block body %}
-
 <section class="landing" id="home">
     <div class="landing-img">
         <img class="small" src="{{ url_for( 'static', filename='img/developers.svg') }}"  alt="students" />
@@ -17,20 +16,20 @@
     </div>
 </section>
 <!--
-<section id="about" class="about">
-    <div class="container">
-        <div class="about-body">
-            <div class="about-img">
-                <img src="{{ url_for( 'static', filename='img/manwithlap.jpg') }}"  alt="man" />
-            </div>
-            <div class="about-text">
-                <h2 class="heading">Who are we?</h2>
-                <p><br>
-                    We hope to make students industry ready by helping them engage in actual software projects and working with other aspiring developers and professionals. We conduct workshops and interactive sessions to help aid us in fulfilling our mission. We often collaborate with other communities to bring events such as the first ever Rails Girls Kochi, Debutsav Kerala, LetsPy etc. We have turned three and so far, the journey has been sweet. </p>
-            </div>
-        </div>
-    </div>
-</section> -->
+     <section id="about" class="about">
+     <div class="container">
+     <div class="about-body">
+     <div class="about-img">
+     <img src="{{ url_for( 'static', filename='img/manwithlap.jpg') }}"  alt="man" />
+     </div>
+     <div class="about-text">
+     <h2 class="heading">Who are we?</h2>
+     <p><br>
+     We hope to make students industry ready by helping them engage in actual software projects and working with other aspiring developers and professionals. We conduct workshops and interactive sessions to help aid us in fulfilling our mission. We often collaborate with other communities to bring events such as the first ever Rails Girls Kochi, Debutsav Kerala, LetsPy etc. We have turned three and so far, the journey has been sweet. </p>
+     </div>
+     </div>
+     </div>
+     </section> -->
 <section id="whatwedo" class="whatwedo">
     <div class="container">
         <div class="thingswedo-container">
@@ -243,19 +242,19 @@
         <h2 class="heading"> Contact Us</h2>
     </div>
     <div class="contact-container">
-        <form action="" method="post">
+        <form name="contact" action="/success" method="POST" onsubmit="return validateForm()">
             <h4>Feel free to drop us a message anytime.</h4>
             <fieldset>
-                <input placeholder="Your name" type="text" tabindex="1" required>
+                <input placeholder="Your name" name="name" type="text" tabindex="1" required>
             </fieldset>
             <fieldset>
-                <input placeholder="Your Email Address" type="email" tabindex="2" required>
+                <input placeholder="Your Email Address" name = "email" type="email" tabindex="2" required>
             </fieldset>
             <fieldset>
-                <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3">
+                <input placeholder="Your Phone Number (optional)" name = "phone" type="tel" tabindex="3">
             </fieldset>
             <fieldset>
-                <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
+                <textarea placeholder="Type your message here...." name="message" tabindex="5" required></textarea>
             </fieldset>
             <fieldset>
                 <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>

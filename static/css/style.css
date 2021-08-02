@@ -310,6 +310,13 @@ fieldset {
 :-ms-input-placeholder {
   color: #888;
 }
+input:invalid {
+  border: 2px dashed red;
+}
+
+input:valid {
+  border: 2px solid black;
+}
 .footer {
   display: flex;
   background: #253137;
@@ -415,6 +422,12 @@ align-left {
   }
 }
 
+.success_page{
+  min-height: 50vh;
+  margin: 10vh auto;
+  display: flex;
+  justify-content: center;
+}
 @media screen and (max-width: 1000px) {
   .landing {
     min-height: 80vh;
