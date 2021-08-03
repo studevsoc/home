@@ -428,6 +428,15 @@ align-left {
   display: flex;
   justify-content: center;
 }
+
+.success_page p{
+  margin: auto 40px;
+}
+
+.success_page img{
+  border-radius: 10px;
+}
+
 @media screen and (max-width: 1000px) {
   .landing {
     min-height: 80vh;
