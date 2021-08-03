@@ -242,7 +242,7 @@
         <h2 class="heading"> Contact Us</h2>
     </div>
     <div class="contact-container">
-        <form name="contact" action="/success" method="POST" onsubmit="return validateForm()">
+        <form name="contact" action="/success" method="POST">
             <h4>Feel free to drop us a message anytime.</h4>
             <fieldset>
                 <input placeholder="Your name" name="name" type="text" tabindex="1" required>
@@ -252,6 +252,9 @@
             </fieldset>
             <fieldset>
                 <input placeholder="Your Phone Number (optional)" name = "phone" type="tel" tabindex="3">
+            </fieldset>
+            <fieldset>
+                <input placeholder="Subject" name="subject" type="text" tabindex="1" required>
             </fieldset>
             <fieldset>
                 <textarea placeholder="Type your message here...." name="message" tabindex="5" required></textarea>
